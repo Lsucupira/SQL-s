@@ -1,0 +1,6 @@
+-- usando condição and com join do lado esquerdo mais o meio 
+SELECT clientes.dataexpedicao, pedido.dataexpedicao
+FROM clientes as clientes
+left JOIN pedido as pedido
+                on clientes.dataexpedicao = pedido.dataexpedicao
+WHERE valor >=800 and clientes.nome  not in (select  distinct clientes.nome = 'F'
